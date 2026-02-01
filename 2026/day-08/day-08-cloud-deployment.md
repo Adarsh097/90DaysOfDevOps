@@ -32,12 +32,15 @@ Command `sudo apt install docker.io`
 # Challenges Faced
 
 * Unable to access Nginx using the public IP.
+
  Solution: I had forgotten to add port 80 to the security group inbound rules. Once added, Nginx became accessible.
 
 * My custom HTML page was not loading on the webpage.
+
  Solution: I reloaded the Nginx service. After reloading, my aboutme.html page was accessible.
 
 * File permissions issue when accessing logs.
+
  Solution : Needed sudo to read /var/log/nginx/access.log.
 
 

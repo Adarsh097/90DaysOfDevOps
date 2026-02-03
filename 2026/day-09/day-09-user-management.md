@@ -41,8 +41,6 @@
 
 ![snapshot](images/mkdir.png)
 
- Set password for user
- 
 ![snapshot](images/berlin_user.png)
 
 ## Team Workspace

@@ -48,8 +48,8 @@ Top commands I'd use in an incident :
 
 ## What will I focus on improving in the next 3 days?
 
-I want to focus on networking now and complete Linux Volume Management.
-Also I will practice users & group management.
-And if time allows I will also watch AWS videos.
+* I want to focus on networking now and complete Linux Volume Management.
+* Also I will practice users & group management.
+* And if time allows I will also watch AWS videos.
 
 

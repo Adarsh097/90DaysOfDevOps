@@ -1,9 +1,10 @@
 # Networking Concepts: DNS, IP, Subnets & Ports
 
 ### Task 1: DNS – How Names Become IPs
-1. Explain in 3–4 lines: what happens when you type `google.com` in a browser?
+1. What happens when you type `google.com` in a browser?
 
 **Answer**
+
     1- First the browser checks in local cache for the corresponding IP address.
     If not present browser will send request to DNS(Domain Name Service) requesting IP address.
     
@@ -25,8 +26,8 @@
 
 ![snapshot](dig.png)
 
-`A` record gives IPv4 address - 142.250.67.174
-`TTL` Time To Live - 46secs
+* `A` - record gives IPv4 address - 142.250.67.174
+* `TTL` - Time To Live - 46secs
 
 ### Task 2: IP Addressing
 1. What is an IPv4 address? How is it structured?
@@ -47,7 +48,7 @@
 It is assigned by ISP to every device on the internet.  |   Assigned within private networks to identify devices locally.
 It is unique across the entire internet.                |   Not routable on the internet.
 Example: `192.168.x.x`, `10.x.x.x`,                     |   Example: `103.176.157.29`, `8.8.8.8 (Google DNS)`
-    `172.16.x.x – 172.31.x.x`                           |
+`172.16.x.x – 172.31.x.x`                               |
 
 
 
@@ -60,8 +61,8 @@ Example: `192.168.x.x`, `10.x.x.x`,                     |   Example: `103.176.15
 
 ![snapshot](ip_addr.png)
 
-- 127.0.0.1/8 - Reserved for local host communication
-- 192.168.0.113/24 - This is a private IP address.
+- **127.0.0.1/8** - Reserved for local host communication
+- **192.168.0.113/24** - This is a private IP address.
 
 
 ### Task 3: CIDR & Subnetting
@@ -69,14 +70,15 @@ Example: `192.168.x.x`, `10.x.x.x`,                     |   Example: `103.176.15
 
 **Answer** - /24 is CIDR notation. It tells us how many bits of the IP address are used for network portion.
             Here first `24` bits (out of 32) are reserved for network. That leaves 8 bits for the host address.
-            IP range : (192.168.1.0 - 192.168.1.255) Total :256 IP's
+            IP range : (192.168.1.0 - 192.168.1.255) Total :256 IP's 
             
 2. How many usable hosts in :
  - `/24` : 254
  - `/16` : 65,534
  - `/28` : 14
  
-3. Explain in your own words: why do we subnet?
+3. Why do we subnet?
+
 **Answer** - Subnet divides one large network into small, manageable and efficient sub-networks.
  * Improves performance - Local traffic stays within its subnet, reducing congestion.
  * Enhanced Security - Access to one subnet doesn’t automatically expose the entire network.

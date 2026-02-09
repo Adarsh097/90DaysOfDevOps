@@ -64,7 +64,7 @@
 
 ---
 
-### Task 5: Error Handling
+## Task 5: Error Handling
 1. Create `safe_script.sh` that:
    - Uses `set -e` at the top (exit on error)
    - Tries to create a directory `/tmp/devops-test`
@@ -82,6 +82,13 @@
    [Here is the script modified_install_packages.sh](scripts/modified_install_packages.sh)
    
    ![snapshot](images/modified_install_packages.png)
+
 ---
+
+## What I learned
+
+* Using loops(while,for)
+* Error handling
+* Using CLI arguments
 
 

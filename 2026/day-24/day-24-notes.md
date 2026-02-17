@@ -16,14 +16,15 @@
     ![snapshot](images/commit_merge.png)
     
 6. Answer in your notes:
-   - What is a fast-forward merge?
-    * It merges two branches without creating a new commit. Instead, it simply moves the current branch’s pointer forward to match the branch being merged. 
-   - When does Git create a merge commit instead?
-    * When you try to merge two branches that have diverged. Git makes a new commit to combine the incoming changes.
-   - What is a merge conflict? (try creating one intentionally by editing the same line in both branches)
-    * A merge conflict occurs when the same part of a file is changed in two branches. 
-      When merging, Git cannot automatically  decide which change to keep. 
-      Git will pause and require you to resolve the conflict before completing the merge.
+  - What is a fast-forward merge?
+     * It merges two branches without creating a new commit. Instead, it simply moves the current branch’s 
+       pointer forward to match the branch being merged. 
+  - When does Git create a merge commit instead?
+     * When you try to merge two branches that have diverged. Git makes a new commit to combine the incoming changes.
+  - What is a merge conflict? (try creating one intentionally by editing the same line in both branches)
+     * A merge conflict occurs when the same part of a file is changed in two branches. 
+       When merging, Git cannot automatically  decide which change to keep. 
+       Git will pause and require you to resolve the conflict before completing the merge.
 ---
 
 ## Task 2: Git Rebase — Hands-On

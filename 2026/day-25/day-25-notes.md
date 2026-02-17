@@ -14,25 +14,25 @@
      again with git add before committing.
     
 4. Re-commit, then use `git reset --hard` to go back one commit — what happens this time?
-   * `git reset --hard` Moves HEAD back to the given commit. All commits after that point are removed from history, 
-      and the changes are deleted completely from your working directory.
+  * `git reset --hard` Moves HEAD back to the given commit. All commits after that point are removed from history, 
+     and the changes are deleted completely from your working directory.
    
 5. Answer in your notes:
    - What is the difference between `--soft`, `--mixed`, and `--hard`?
-   * `--soft` - Removes commits but keeps changes still staged.
-   * `--mixed` - Removes commits and keeps changes unstaged.
-   * `--hard` - Removes commits and completely deletes changes.
+     * `--soft` - Removes commits but keeps changes still staged.
+     * `--mixed` - Removes commits and keeps changes unstaged.
+     * `--hard` - Removes commits and completely deletes changes.
    
    - Which one is destructive and why?
-   * `--hard` is destructive because it permanently deletes history and changes.
+     * `--hard` is destructive because it permanently deletes history and changes.
    
    - When would you use each one?
-   * `--soft` - to change commit message.
-   * `--mixed` - to modify changes.
-   * `--hard` - to remove all changes.
+     * `--soft` - to change commit message.
+     * `--mixed` - to modify changes.
+     * `--hard` - to remove all changes.
    
    - Should you ever use `git reset` on commits that are already pushed?
-   * No, already pushed commits could have been pulled and used by other people so it will create confusion and conflicts.
+     * No, already pushed commits could have been pulled and used by other people so it will create confusion and conflicts.
 
 ---
 
@@ -57,10 +57,10 @@ specified
 
 | | `git reset` | `git revert` |
 |---|---|---|
-| What it does | Rewrites history and undoes changes from the specified commit | Preserves history, adds a new commit that reverses the specified commit’s changes |
+| What it does | Rewrites history and undoes changes from the specified commit. | Preserves history, adds a new commit that reverses the specified commit’s changes. |
 | Removes commit from history? | Yes | No |
 | Safe for shared/pushed branches? | No | Yes |
-| When to use | To completely remove commit and its changes. | To preserve history while safely undoing changes |
+| When to use | To completely remove commit and its changes. | To preserve history while safely undoing changes. |
 
 ---
 

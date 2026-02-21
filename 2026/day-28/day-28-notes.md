@@ -1,13 +1,5 @@
 # Day 28 – Revision Day: Everything from Day 1 to Day 27
 
-## Task
-
-You've covered a lot of ground in 27 days — DevOps fundamentals, Linux deep dives, Shell scripting, Python basics, Git & GitHub, and even your developer branding. Today, **stop and revise**. No new concepts. Just solidify what you've learned.
-
-The goal is to identify gaps, revisit topics you struggled with, and make sure you can confidently explain and use everything covered so far.
-
----
-
 ## What You've Covered So Far
 
 | Days | Topic | Key Concepts |
@@ -39,39 +31,39 @@ Go through the checklist below. For each item, mark yourself honestly:
 #### Linux
 - [x] Navigate the file system, create/move/delete files and directories
 - [x] Manage processes — list, kill, background/foreground
-- [ ] Work with systemd — start, stop, enable, check status of services
-- [ ] Read and edit text files using vi/vim or nano
-- [ ] Troubleshoot CPU, memory, and disk issues using top, free, df, du
-- [ ] Explain the Linux file system hierarchy (/, /etc, /var, /home, /tmp, etc.)
-- [ ] Create users and groups, manage passwords
-- [ ] Set file permissions using chmod (numeric and symbolic)
-- [ ] Change file ownership with chown and chgrp
-- [ ] Create and manage LVM volumes
-- [ ] Check network connectivity — ping, curl, netstat, ss, dig, nslookup
-- [ ] Explain DNS resolution, IP addressing, subnets, and common ports
+- [x] Work with systemd — start, stop, enable, check status of services
+- [x] Read and edit text files using vi/vim or nano
+- [x] Troubleshoot CPU, memory, and disk issues using top, free, df, du
+- [x] Explain the Linux file system hierarchy (/, /etc, /var, /home, /tmp, etc.)
+- [x] Create users and groups, manage passwords
+- [x] Set file permissions using chmod (numeric and symbolic)
+- [x] Change file ownership with chown and chgrp
+- [x] Create and manage LVM volumes
+- [x] Check network connectivity — ping, curl, netstat, ss, dig, nslookup
+- [y] Explain DNS resolution, IP addressing, subnets, and common ports
 
 #### Shell Scripting
-- [ ] Write a script with variables, arguments, and user input
-- [ ] Use if/elif/else and case statements
-- [ ] Write for, while, and until loops
-- [ ] Define and call functions with arguments and return values
-- [ ] Use grep, awk, sed, sort, uniq for text processing
-- [ ] Handle errors with set -e, set -u, set -o pipefail, trap
-- [ ] Schedule scripts with crontab
+- [x] Write a script with variables, arguments, and user input
+- [x] Use if/elif/else and case statements
+- [x] Write for, while, and until loops
+- [x] Define and call functions with arguments and return values
+- [x] Use grep, awk, sed, sort, uniq for text processing
+- [x] Handle errors with set -e, set -u, set -o pipefail, trap
+- [x] Schedule scripts with crontab
 
 #### Git & GitHub
-- [ ] Initialize a repo, stage, commit, and view history
-- [ ] Create and switch branches
-- [ ] Push to and pull from GitHub
-- [ ] Explain clone vs fork
-- [ ] Merge branches — understand fast-forward vs merge commit
-- [ ] Rebase a branch and explain when to use it vs merge
-- [ ] Use git stash and git stash pop
-- [ ] Cherry-pick a commit from another branch
-- [ ] Explain squash merge vs regular merge
-- [ ] Use git reset (soft, mixed, hard) and git revert
-- [ ] Explain GitFlow, GitHub Flow, and Trunk-Based Development
-- [ ] Use GitHub CLI to create repos, PRs, and issues
+- [x] Initialize a repo, stage, commit, and view history
+- [x] Create and switch branches
+- [x] Push to and pull from GitHub
+- [x] Explain clone vs fork
+- [x] Merge branches — understand fast-forward vs merge commit
+- [x] Rebase a branch and explain when to use it vs merge
+- [x] Use git stash and git stash pop
+- [x] Cherry-pick a commit from another branch
+- [x] Explain squash merge vs regular merge
+- [x] Use git reset (soft, mixed, hard) and git revert
+- [x] Explain GitFlow, GitHub Flow, and Trunk-Based Development
+- [x] Use GitHub CLI to create repos, PRs, and issues
 
 ---
 
@@ -86,50 +78,58 @@ Go through the checklist below. For each item, mark yourself honestly:
 Answer these from memory (no Googling). Then verify your answers:
 
 1. What does `chmod 755 script.sh` do?
+* Give execute permission to file - rwxr-xr-x
+
 2. What is the difference between a process and a service?
+* A process is an instance of a running program. Start when you run a command/program and stops when it finishes.
+  Ex:(ls,script.sh,top,chrome).
+* A service is also a process but it runs in the background and is managed by systemd and are often started 
+  automatically on boot, they support ongoing functionality to your system, long running processes.
+  Ex:(ssh,cron,nginx).
+
 3. How do you find which process is using port 8080?
+* `sudo netstat -tulpn | grep 8080`
+
 4. What does `set -euo pipefail` do in a shell script?
+*     `set -e` - Exit on error
+      `set -u` - Undefined variable error
+      `set -o pipefail` - Exit when one ouput from pipe fails
+      
 5. What is the difference between `git reset --hard` and `git revert`?
+* `git reset --hard` - Deletes evry commit until the specified commit and its changes from working directory.
+* `git revert` - Adds a commit that undoes the changes until the given commit also keeps the original commit.
+
 6. What branching strategy would you recommend for a team of 5 developers shipping weekly?
+* Trunk-based development
+
 7. What does `git stash` do and when would you use it?
+* It is used to temporarily store your uncommited changes in stash, when you have sone urgent fix to do so you use git `stash`.
+
 8. How do you schedule a script to run every day at 3 AM?
+* add in crontab file - `0 3 * * *`
+
 9. What is the difference between `git fetch` and `git pull`?
+* `git fetch` - gets all the changes of remote but doesn't merge them.
+* `git pull` - gets all the changes from specified branch of remote and merges them.
+
 10. What is LVM and why would you use it instead of regular partitions?
+* `Logical Volume Manager` - It allows flexible storage management. First you attach a volume create a PV(physical volume) then
+  VG(volume group) then from VG you create LV(Logical Volume) that can be increased or decreased according to needs.
+  Unlike regular partition that are fixed. If you want to increase regular partition you attach a new volume and use it.
 
 ---
 
 ### Task 4: Organize Your Work
-1. Make sure all your daily submissions (day-1 through day-27) are committed and pushed
-2. Check that your `git-commands.md` is up to date
-3. Check that your shell scripting cheat sheet is complete
-4. Verify your GitHub profile and repos are clean (from Day 27)
+1. Make sure all your daily submissions (day-1 through day-27) are committed and pushed [x]
+2. Check that your `git-commands.md` is up to date[x]
+3. Check that your shell scripting cheat sheet is complete [x]
+4. Verify your GitHub profile and repos are clean (from Day 27) [x]
 
 ---
 
 ### Task 5: Teach It Back
-Pick **one topic** you've learned and write a short explanation (5-10 lines) as if you're teaching it to someone who has never heard of it. Add it to your `day-28-notes.md`.
 
-Examples:
-- Explain Git branching to a non-developer
-- Explain file permissions to a new Linux user
-- Explain what a crontab is and why sysadmins use it
-
-Teaching is the best test of understanding.
+## Topic
 
 ---
 
-## Submission
-1. Add your `day-28-notes.md` to `2026/day-28/`
-2. Push to your fork
-3. Make sure all previous days are pushed and up to date
-
----
-
-## Learn in Public
-
-Share your self-assessment results or your "teach it back" explanation on LinkedIn. Be honest about what you found easy and what you need to work on.
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**

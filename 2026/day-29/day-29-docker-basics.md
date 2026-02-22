@@ -22,13 +22,13 @@ Research and write short notes on:
       
 - What is the Docker architecture? (daemon, client, images, containers, registry)
 
-      **Daemon** - It manages containers, images, networks, volumes. In short all objects of Docker.
-      **Client** - It is used to command docker daemon. It can manage one or more docker daemon.
-      **Images** - It is the blueprint to build container. It contains all the commands to run an application.
-      **Containers** - It is the actual instance of an image. Application runs inside container isolated.
-      ** Registry** - It is where all the images are stored. There are tow types :
-        **Public** : e.g. Docker Hub, accessible to everyone.
-        **Private** : Used by enterprises for internal images.
+    * Daemon - It manages containers, images, networks, volumes. In short all objects of Docker.
+    * Client - It is used to command docker daemon. It can manage one or more docker daemon.
+    * Images - It is the blueprint to build container. It contains all the commands to run an application.
+    * Containers - It is the actual instance of an image. Application runs inside container isolated.
+    * Registry - It is where all the images are stored. There are tow types :
+       * Public : e.g. Docker Hub, accessible to everyone.
+       * Private : Used by enterprises for internal images.
 
 ---
 
@@ -89,6 +89,6 @@ Research and write short notes on:
 
 ## Deployed on nginx in container locally
 
-    ![snapshot](images/page1.png)
+![snapshot](images/page1.png)
     
-    ![snapshot](images/page2.png)
+![snapshot](images/page2.png)

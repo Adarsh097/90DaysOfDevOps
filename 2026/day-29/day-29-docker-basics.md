@@ -4,31 +4,31 @@
 Research and write short notes on:
 - What is a container and why do we need them?
 
-     A container is a run time instance of a docker image. It holds code, dependencies, libraries and 
-     configuration needed to run the application.
-     We need container to solve "It runs on my machine, fails on clients machine".
-     Containers are isolated, lightweight, portable and runs on any OS.
-     Containers are like virtualization running on docker engine.
+      A container is a run time instance of a docker image. It holds code, dependencies, libraries and 
+      configuration needed to run the application.
+      We need container to solve "It runs on my machine, fails on clients machine".
+      Containers are isolated, lightweight, portable and runs on any OS.
+      Containers are like virtualization running on docker engine.
      
 - Containers vs Virtual Machines — what's the real difference?
 
-      | Containers | Virtual Machines |
-      |------------|------------------|
-      | Uses Hosts OS | Have their own OS |
-      | Shared resources from machine | Dedicated resources from machine |
-      | Lightweight | Heavy |
-      | Fast performance | Slow performance |
-      | Highly portable | Less portable|
+    | Containers | Virtual Machines |
+    |------------|------------------|
+    | Uses Hosts OS | Have their own OS |
+    | Shared resources from machine | Dedicated resources from machine |
+    | Lightweight | Heavy |
+    | Fast performance | Slow performance |
+    | Highly portable | Less portable|
       
 - What is the Docker architecture? (daemon, client, images, containers, registry)
 
-     **Daemon** - It manages containers, images, networks, volumes. In short all objects of Docker.
-     **Client** - It is used to command docker daemon. It can manage one or more docker daemon.
-     **Images** - It is the blueprint to build container. It contains all the commands to run an application.
-     **Containers** - It is the actual instance of an image. Application runs inside container isolated.
-     ** Registry** - It is where all the images are stored. There are tow types :
-      **Public** : e.g. Docker Hub, accessible to everyone.
-      **Private** : Used by enterprises for internal images.
+      **Daemon** - It manages containers, images, networks, volumes. In short all objects of Docker.
+      **Client** - It is used to command docker daemon. It can manage one or more docker daemon.
+      **Images** - It is the blueprint to build container. It contains all the commands to run an application.
+      **Containers** - It is the actual instance of an image. Application runs inside container isolated.
+      ** Registry** - It is where all the images are stored. There are tow types :
+        **Public** : e.g. Docker Hub, accessible to everyone.
+        **Private** : Used by enterprises for internal images.
 
 ---
 
@@ -86,6 +86,8 @@ Research and write short notes on:
     ![snapshot](images/exec.png)
 
 ---
+
+## Deployed on nginx in container locally
 
     ![snapshot](images/page1.png)
     

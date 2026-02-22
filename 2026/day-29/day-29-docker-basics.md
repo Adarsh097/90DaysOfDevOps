@@ -3,6 +3,7 @@
 ## Task 1: What is Docker?
 Research and write short notes on:
 - What is a container and why do we need them?
+
      A container is a run time instance of a docker image. It holds code, dependencies, libraries and 
      configuration needed to run the application.
      We need container to solve "It runs on my machine, fails on clients machine".
@@ -10,6 +11,7 @@ Research and write short notes on:
      Containers are like virtualization running on docker engine.
      
 - Containers vs Virtual Machines — what's the real difference?
+
       | Containers | Virtual Machines |
       |------------|------------------|
       | Uses Hosts OS | Have their own OS |
@@ -19,6 +21,7 @@ Research and write short notes on:
       | Highly portable | Less portable|
       
 - What is the Docker architecture? (daemon, client, images, containers, registry)
+
      **Daemon** - It manages containers, images, networks, volumes. In short all objects of Docker.
      **Client** - It is used to command docker daemon. It can manage one or more docker daemon.
      **Images** - It is the blueprint to build container. It contains all the commands to run an application.
@@ -85,4 +88,5 @@ Research and write short notes on:
 ---
 
     ![snapshot](images/page1.png)
+    
     ![snapshot](images/page2.png)

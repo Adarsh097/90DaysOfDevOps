@@ -14,5 +14,5 @@ else
 	exit 1
 fi
 
-systemctl status $service  | awk 'NR==3 {print $2}'
+systemctl status $service  | awk '/Active/ {print $2}'
 

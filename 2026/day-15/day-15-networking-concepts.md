@@ -45,10 +45,10 @@
 
 **Public IP**                                           |   **Private IP**
 --------------------------------------------------------|--------------------------------------------------------------------
-It is assigned by ISP to every device on the internet.  |   Assigned within private networks to identify devices locally.
+It is assigned by ISP to every device on the internet.  |   Assigned within private networks to identify devices  locally. 
 It is unique across the entire internet.                |   Not routable on the internet.
-Example: `192.168.x.x`, `10.x.x.x`,                     |   Example: `103.176.157.29`, `8.8.8.8 (Google DNS)`
-`172.16.x.x – 172.31.x.x`                               |
+Example: `103.176.157.29`, `8.8.8.8 (Google DNS)`       |   Example: `192.168.x.x`, `10.x.x.x`,
+                                                        |   `172.16.x.x – 172.31.x.x`
 
 
 

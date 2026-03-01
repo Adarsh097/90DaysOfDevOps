@@ -1,0 +1,14 @@
+# Ignore the tests folder
+tests/
+test/
+*.test.js
+
+# Ignore heavy local folders
+node_modules/
+npm-debug.log
+
+# Ignore git and docker metadata
+.git
+.dockerignore
+Dockerfile
+docker-compose*

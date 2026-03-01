@@ -1,0 +1,107 @@
+services:
+  vote:
+    build:
+      context: ./vote
+    image: vote-app
+    depends_on:
+      redis:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    healthcheck: 
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    volumes:
+     - ./vote:/app
+    networks:
+      - front-tier
+      - back-tier
+    labels:
+      description: "Frontend for user voting"  
+
+  result:
+    build:
+      context: ./result
+    image: vote-result
+    ports:
+      - "8081:4000"
+      - "127.0.0.1:9229:9229"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - front-tier
+      - back-tier
+    labels:
+      description: "Frontend to view result"
+
+  worker:
+    build:
+      context: ./worker
+    image: vote-worker
+    depends_on:
+      redis:
+        condition: service_healthy 
+      postgres:
+        condition: service_healthy 
+    networks:
+      - back-tier
+    labels:
+      description: "Backend to get votes from redis and stores in db"
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - "./healthchecks:/healthchecks"
+    healthcheck:
+      test: ["CMD-SHELL", "sh /healthchecks/redis.sh"]
+      interval: 5s
+    networks:
+      - back-tier
+    labels:
+      description: "Collecting new votes"
+      
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - "voting-data:/var/lib/postgresql/data"
+      - "./healthchecks:/healthchecks"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      back-tier:
+        aliases:
+          - db
+    restart: always
+    labels:
+      description: "Persistent storage for votes"
+
+  seed-data:
+    build:
+      context: ./seed-data
+    image: vote-seed-data
+    profiles: ["seed"]
+    depends_on:
+      vote:
+        condition: service_healthy 
+    networks:
+      - front-tier
+    restart: "no"
+    labels:
+      description: "One-time database population"  
+
+networks:
+   front-tier:
+   back-tier:
+
+volumes:
+  voting-data:

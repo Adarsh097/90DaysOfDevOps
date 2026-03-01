@@ -1,0 +1,6 @@
+# Ignore the tests folder
+tests/
+test/
+*.test.js
+
+

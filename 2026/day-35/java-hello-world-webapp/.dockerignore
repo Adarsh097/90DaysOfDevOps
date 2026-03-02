@@ -1,0 +1,12 @@
+# ignore git files
+.git
+.gitignore
+
+# ignore build artifacts
+target/
+
+# ignore md 
+*.md
+
+# ignore congis
+*.env

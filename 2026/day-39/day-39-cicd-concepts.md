@@ -108,7 +108,7 @@ Draw a CI/CD pipeline for this scenario:
 3. Open one workflow YAML file
 4. Write in your notes:
 
-   [Kubenetes minikube workflow of built.yml](https://github.com/kubernetes/minikube/blob/master/.github/workflows/build.yml)
+   [Kubernetes minikube workflow of built.yml](https://github.com/kubernetes/minikube/blob/master/.github/workflows/build.yml)
 
    - What triggers it?
       - Manual action.

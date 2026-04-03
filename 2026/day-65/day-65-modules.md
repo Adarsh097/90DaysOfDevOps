@@ -217,7 +217,7 @@ Notice the `module.vpc.`, `module.web_server.`, `module.web_sg.` prefixes.
 terraform destroy
 ```
 
-Write down five module best practices:
+* Write down five module best practices:
    - Always pin versions for registry modules
    - Keep modules focused -- one concern per module
    - Use variables for everything, hardcode nothing
@@ -225,9 +225,9 @@ Write down five module best practices:
    - Add a README.md to every custom module
 
 
-- Comparison: hand-written VPC vs registry VPC module (resources created)
+* Comparison: hand-written VPC vs registry VPC module (resources created)
 
-   * **Hand-written VPC (Day 62) **
+   * **Hand-written VPC (Day 62)**
      - VPC 1
      - Subnet 1
      - Internet Gateway 1

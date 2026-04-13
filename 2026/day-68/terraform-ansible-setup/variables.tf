@@ -61,5 +61,5 @@ variable "project_name" {
 variable "allowed_ports" {
   description = "Ports"
   type        = list(number)
-  default     = [22, 80, 443]
+  default     = [22, 80, 443, 81, 8080]
 }

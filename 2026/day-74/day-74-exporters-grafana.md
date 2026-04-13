@@ -298,8 +298,6 @@ docker compose up -d grafana
 
 Check Connections > Data Sources -- Prometheus should already be there without any manual setup.
 
-   - `Default` is manually added, the other prometheus is provisioned by config.
-
    ![snapshot](images/5-a.png)
 
 **Document:** Why is provisioning datasources via YAML better than configuring them manually through the UI?

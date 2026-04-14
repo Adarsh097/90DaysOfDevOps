@@ -451,8 +451,9 @@ flowchart LR
 
     subgraph METRICS["METRICS PIPELINE"]
         NE["Node Exporter"]
-        CA["cAdvisor"]
+        CA["cAdvisor/Docker"]
         OTEL_M["OTEL Collector:8889"]
+        PR["Prometheus"]
         PROM["Prometheus"]
         GRAF_D["Grafana Dashboards"]
         ALERT["Alert Rules → Notifications"]
@@ -460,6 +461,7 @@ flowchart LR
         NE --> PROM
         CA --> PROM
         OTEL_M --> PROM
+        PR --> PROM
         PROM --> GRAF_D
         PROM --> ALERT
     end

@@ -425,6 +425,7 @@ All 8 containers should be healthy and running.
 
 ## The full architecture diagram with all three pillars
 
+```mermaid
 flowchart TB
     subgraph METRICS["METRICS PIPELINE"]
         direction LR
@@ -465,5 +466,6 @@ flowchart TB
         OTEL_T --> DEBUG
         OTEL_T -.-> FUTURE
     end
+```
 
 ---

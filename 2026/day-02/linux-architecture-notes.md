@@ -775,27 +775,9 @@ journalctl -xe  # System logs
 
 ---
 
-# Key DevOps Takeaway
-
-Before learning:
-
-* Docker
-* Kubernetes
-* AWS
-* Terraform
-* CI/CD
-
-You must master:
-
-1. Linux Architecture
-2. Kernel Fundamentals
-3. System Calls
-4. Shell Operations
-5. Processes & Signals
-6. Service Management
-7. File Permissions
-8. Resource Monitoring
-9. Disk Management
-10. Troubleshooting Basics
+```
+- to check whether you have write permission or not 
+[ -w filename/directory ] && echo "Writable" || echo "Not Writable"
+```
 
 **Nearly every production issue ultimately traces back to CPU, Memory, Disk, Network, Processes, or Services—all of which are managed by Linux.**
